@@ -1,20 +1,28 @@
-[
-    {
-        "id": "01",
-        "description": "Wikipedia page on Web scraping",
-        "url": "https://en.wikipedia.org/wiki/Web_scraping",
-        "search": {
-            "query": "h1",
-            "value": "a"
+{
+    "items": [
+        {
+            "id": "01",
+            "url": "https://en.wikipedia.org/wiki/Web_scraping",
+            "query": {
+                "limit": 1,
+                "name": "h1",
+                "attrs": "",
+                "recursive": false,
+                "string": "",
+                "kwargs": ""
+            }
+        },
+        {
+            "id": "02",
+            "url": "https://www.gutenberg.org/files/844/844-h/844-h.htm",
+            "query": {
+                "limit": 10,
+                "name": "h2",
+                "attrs": "",
+                "recursive": false,
+                "string": "",
+                "kwargs": ""
+            }
         }
-    },
-    {
-        "id": "02",
-        "description": "The Importance of Being Earnest",
-        "url": "https://www.gutenberg.org/files/844/844-h/844-h.htm",
-        "search": {
-            "query": "h2",
-            "value": "a"
-        }
-    }
-]
+    ]
+}
