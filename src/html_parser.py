@@ -1,3 +1,4 @@
+import json
 from bs4 import BeautifulSoup
 
 class HtmlParser:
@@ -8,3 +9,9 @@ class HtmlParser:
 
     def get_html(self):
         return self.html
+    
+    # https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
+    # find_all(name, attrs, recursive, string, limit, **kwargs)
+    def find_all(self, query):
+        result = self.html.find_all(query.name, string=query.string)
+        return result

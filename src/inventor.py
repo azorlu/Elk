@@ -1,5 +1,6 @@
 import json
 from types import SimpleNamespace
+from item import Item
 
 class Inventor:
     """Handles the inventory of requests"""
@@ -11,9 +12,9 @@ class Inventor:
             self.inventory_data = json.loads(read_file.read(), object_hook=lambda d: SimpleNamespace(**d))
     
     def get_item(self, item_id):
-        for item in self.inventory_data.items:
-            if item.id == item_id:
-                return item
+        for inventory_item in self.inventory_data.items:
+            if inventory_item.id == item_id:
+                return Item(inventory_item)
         return None           
     
 

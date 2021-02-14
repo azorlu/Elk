@@ -4,11 +4,13 @@
             "id": "01",
             "url": "https://en.wikipedia.org/wiki/Web_scraping",
             "query": {
-                "limit": 1,
-                "name": "h1",
-                "attrs": "",
+                "limit": 3,
+                "name": "span",
+                "attrs": {
+                    "id": "firstHeading"
+                },
                 "recursive": false,
-                "string": "",
+                "string": "Techniques",
                 "kwargs": ""
             }
         },
@@ -16,11 +18,11 @@
             "id": "02",
             "url": "https://www.gutenberg.org/files/844/844-h/844-h.htm",
             "query": {
-                "limit": 10,
+                "limit": 5,
                 "name": "h2",
-                "attrs": "",
+                "attrs": {},
                 "recursive": false,
-                "string": "",
+                "string": "FIRST ACT",
                 "kwargs": ""
             }
         }
