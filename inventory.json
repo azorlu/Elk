@@ -25,6 +25,18 @@
                 "string": "FIRST ACT",
                 "kwargs": ""
             }
+        },
+        {
+            "id": "03",
+            "url": "test_page.html",
+            "query": {
+                "limit": 1,
+                "name": "h2",
+                "attrs": {},
+                "recursive": false,
+                "string": "This is heading 2",
+                "kwargs": ""
+            }
         }
     ]
 }

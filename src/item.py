@@ -1,5 +1,5 @@
 from types import SimpleNamespace
-from query import Query
+from .query import Query
 
 class Item:
     """Inventory item"""

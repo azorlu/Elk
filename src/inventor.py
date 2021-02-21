@@ -1,6 +1,6 @@
 import json
 from types import SimpleNamespace
-from item import Item
+from .item import Item
 
 class Inventor:
     """Handles the inventory of requests"""

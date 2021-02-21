@@ -1,5 +1,5 @@
 import click
-from runner import Runner
+from .runner import Runner
 
 @click.command()
 @click.option('--i', type=click.Path(exists=False), 
@@ -10,8 +10,9 @@ from runner import Runner
     help='path to Google Chrome driver file')
 @click.argument('id', nargs=1)
 def main(i, d, id):
-    runner = Runner(i, d)
+    runner = Runner(i, d, True)
     result = runner.run_query(id)
+    runner.quit()
     click.echo(result)
 
 if __name__ == '__main__':
