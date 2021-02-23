@@ -1,5 +1,7 @@
 import json
 from bs4 import BeautifulSoup
+from .query_type import QueryType
+from .query import Query
 
 class HtmlParser:
     """Parses html using Beautiful Soup"""
@@ -18,5 +20,16 @@ class HtmlParser:
     # https://www.crummy.com/software/BeautifulSoup/bs4/doc/#find-all
     # find_all(name, attrs, recursive, string, limit, **kwargs)
     def find_all(self, query):
-        result = self.html.find_all(query.name, string=query.string)
+        return self.find_all_by_query_type(query)
+    
+    def find_all_by_query_type(self, query):
+        if (query.query_type & QueryType.NAME_STRING):
+            result = self.html.find_all(query.name, string= query.string)
+        elif (query.query_type & QueryType.NAME):
+            result = self.html.find_all(query.name)
+        elif (query.query_type & QueryType.STRING):
+            result = self.html.find_all(string=query.string)
+        else:
+            # return an empty array for non-implemented query types
+            return [] 
         return result

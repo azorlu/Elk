@@ -1,7 +1,29 @@
 {
     "items": [
         {
-            "id": "01",
+            "id": "test_find_by_name",
+            "url": "test_page.html",
+            "query": {
+                "name": "h2"
+            }
+        },
+        {
+            "id": "test_find_by_string",
+            "url": "test_page.html",
+            "query": {
+                "string": "Span number three."
+            }
+        },
+        {
+            "id": "test_find_by_name_and_string",
+            "url": "test_page.html",
+            "query": {
+                "name": "span",
+                "string": "Span number three."
+            }
+        },
+        {
+            "id": "test_41",
             "url": "https://en.wikipedia.org/wiki/Web_scraping",
             "query": {
                 "limit": 3,
@@ -15,7 +37,7 @@
             }
         },
         {
-            "id": "02",
+            "id": "test_42",
             "url": "https://www.gutenberg.org/files/844/844-h/844-h.htm",
             "query": {
                 "limit": 5,
@@ -23,18 +45,6 @@
                 "attrs": {},
                 "recursive": false,
                 "string": "FIRST ACT",
-                "kwargs": ""
-            }
-        },
-        {
-            "id": "03",
-            "url": "test_page.html",
-            "query": {
-                "limit": 1,
-                "name": "h2",
-                "attrs": {},
-                "recursive": false,
-                "string": "This is heading 2",
                 "kwargs": ""
             }
         }

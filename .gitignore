@@ -132,3 +132,4 @@ dmypy.json
 vendor/
 temp/
 driver/
+test_page_media/
